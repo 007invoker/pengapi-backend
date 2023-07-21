@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: pengapi-backend
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://175.178.181.126:3306/my_db2"
+    username: root
+    password: miracle@
+
+dubbo:
+  application:
+    name: dubbo-springboot-demo-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-registry
+    address: nacos://10.0.8.9:8848
+  config-center:
+    timeout: 40000
+
+server:
+  address: 0.0.0.0
+  port: 7529
+  servlet:
+    context-path: /api
+    # cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
+        domain: 175.178.181.126

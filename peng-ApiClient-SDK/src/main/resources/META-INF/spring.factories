@@ -1,0 +1,4 @@
+#spring boot starter
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.pengapiclientsdk.config.pengApiClintConfig
+
+

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  nacos:
+    image: nacos/nacos-server:v2.1.2
+    environment:
+      - MODE=standalone
+      - JVM_XMS=64m
+      - JVM_XMX=64m
+      - JVM_XMN=16m
+    ports:
+      - "8848:8848"
+    volumes:
+      - /opt/nacos/config:/home/nacos/init.d/custom.properties
+      - /opt/nacos/data:/home/nacos/nacos-server-2.1.2/data
+    container_name: nacos
