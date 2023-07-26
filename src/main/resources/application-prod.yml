@@ -4,9 +4,9 @@ spring:
   # DataSource Config
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: "jdbc:mysql://175.178.181.126:3306/my_db2"
-    username: root
-    password: miracle@
+    url: "数据库地址"
+    username: 账号
+    password: 密码
 
 dubbo:
   application:
@@ -16,7 +16,7 @@ dubbo:
     port: -1
   registry:
     id: nacos-registry
-    address: nacos://10.0.8.9:8848
+    address: nacos://服务器内网地址:8848
   config-center:
     timeout: 40000
 
@@ -29,4 +29,4 @@ server:
     session:
       cookie:
         max-age: 2592000
-        domain: 175.178.181.126
+        domain: 服务器外网地址
