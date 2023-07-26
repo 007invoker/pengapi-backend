@@ -16,8 +16,7 @@ dubbo:
     port: -1
   registry:
     id: nacos-registry
-    address: nacos://10.0.8.9:8848
-#    address: nacos://localhost:8848
+    address: nacos://服务器内网地址:8848
   config-center:
     timeout: 40000
 
@@ -26,7 +25,6 @@ spring:
     gateway:
       routes:
         - id: api_route
-          uri: http://175.178.181.126:8123
-#          uri: http://localhost:8123
+          uri: http://服务器外网地址:8123
           predicates:
             - Path=/api/**
